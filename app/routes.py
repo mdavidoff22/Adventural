@@ -73,4 +73,19 @@ def nextAdvenghgshfg():
         elif x == "option03":
             return render_template("/results10.html", x=x)
 
+# from results2 to 5 or 6
 
+@app.route('/decision3d', methods=['GET', 'POST'])
+@app.route('/decision3d.html', methods=['GET', 'POST'])
+def nextAdvenghgshdfg():
+   if request.method == 'GET':
+       return "Sorry, your story is over."
+   else:
+        userdata = request.form
+        x = (userdata["decision"])
+        if x == "option01":
+           return render_template("/wrong.html", x=x)   
+        elif x == "option02":
+            return render_template("/results5.html", x=x)
+        elif x == "option03":
+            return render_template("/results6.html", x=x)
